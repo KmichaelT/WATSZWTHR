@@ -3,6 +3,25 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+const key='j9izFtRarb6HbCGzZJZDeNcZHetKOYGb';
+
+
+// gets city info
+const getCity= async(city)=>{
+    const base='http://dataservice.accuweather.com/locations/v1/cities/search';
+    const query=`?apikey=${key}&q=${city}`;
+    const response = await fetch(base+query);
+    const data = await response.json();
+    return data[0];
+};
+// gets current weather condition
+const getWeather=async(id)=>{
+    const base='http://dataservice.accuweather.com/currentconditions/v1/';
+    const query=`${id}?apikey=${key}`;
+    const response = await fetch(base+query);
+    const data = await response.json();
+    return data[0];
+};
 
 const updateUi = (data) => {
   const cityData = data.cityData;
