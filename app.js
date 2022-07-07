@@ -3,7 +3,7 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
-const key='j9izFtRarb6HbCGzZJZDeNcZHetKOYGb';
+const key='zPZJNtIhAeV3HtHZzhJAkplqxJPwxP0Z';
 
 
 // gets city info
