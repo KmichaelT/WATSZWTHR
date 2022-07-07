@@ -5,10 +5,11 @@ body{
     
 }
 .container{
-    width: 400px;
+    width: 350px;
 }
 
 .fullheight{
+min-height:800px;
 height: 100vh;
 }
 .icon{
